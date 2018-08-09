@@ -8,7 +8,7 @@
               http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
     <context:property-placeholder location="classpath*:database.properties"/>
-    <context:component-scan base-package="com.sue"/>
+    <context:component-scan base-package="edu.itu.sue"/>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -32,10 +32,10 @@
 
         <property name="annotatedClasses">
             <list>
-                <value>com.sue.model.Patient</value>
-                <value>com.sue.model.Clinic</value>
-                <value>com.sue.model.Treatment</value>
-                <value>com.sue.model.Doctor</value>
+                <value>edu.itu.sue.datamodel.entity.Patient</value>
+                <value>edu.itu.sue.datamodel.entity.Clinic</value>
+                <value>edu.itu.sue.datamodel.entity.Treatment</value>
+                <value>edu.itu.sue.datamodel.entity.Doctor</value>
             </list>
         </property>
     </bean>
